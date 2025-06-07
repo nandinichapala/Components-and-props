@@ -14,8 +14,10 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      const Welcome=()=><h1 className="message">Hello world!!</h1>
-      ReactDOM.render(<Welcome/>,document.getElementById("root"))
+      const Welcome=(props)=>{
+        const{greetings,name}=props
+        return <h1 className="message">{greetings}, {name}!!</h1>}
+      ReactDOM.render(<Welcome greetings="Hello" name="Nandini"/>,document.getElementById("root"))
     </script>
   </body>
 </html>
